@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="videoStyle.css" />
+    <title>Video Gallery</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <main>
+      <div class="big-wrapper light">
+        <header>
+          <div class="cont">
+            <a href="index.html">
+              <div class="logo">
+                <img src="./images/1967.png" alt="logo" />
+                <h3>GJ</h3>
+              </div>
+            </a>
+            <div class="links">
+              <ul>
+                <li><a href="index.html#bio">Biography</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="video.html">Videos</a></li>
+                <li><a href="index.html#links">Links</a></li>
+                <li class="darkmode">
+                  <button class="toggle-btn">
+                    <i class="fa-regular fa-moon"></i>
+                    <i class="fa-regular fa-sun"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="overlay"></div>
+
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+
+            <div class="dropdown">
+              <div class="select">
+                <img src="images/lang/usa.png" class="selected" />
+                <div class="caret"></div>
+              </div>
+              <ul class="menu">
+                <li>
+                  <a href="georgian/videoGeo.html">
+                    <img src="images/lang/geo.png" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div class="container">
+          <h1>Video Gallery</h1>
+          <div class="row">
+            <div class="col">
+              <div class="feature-img">
+                <img src="images/videos/thumbnail1.png" width="100%" />
+                <img
+                  src="images/play.png"
+                  class="play-btn"
+                  onclick="playVideo('images/videos/1.mp4')"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="small-img-row">
+                <div class="small-img">
+                  <img src="images/videos/thumbnail2.png" />
+                  <img
+                    src="images/play.png"
+                    class="play-btn"
+                    onclick="playVideo('images/videos/2.mp4')"
+                  />
+                </div>
+                <p>Video 2</p>
+              </div>
+              <div class="small-img-row">
+                <div class="small-img">
+                  <img src="images/videos/thumbnail3.png" />
+                  <img
+                    src="images/play.png"
+                    class="play-btn"
+                    onclick="playVideo('images/videos/example.mp4')"
+                  />
+                </div>
+                <p>Video 3</p>
+              </div>
+              <div class="small-img-row">
+                <div class="small-img">
+                  <img src="images/videos/thumbnail4.png" />
+                  <img
+                    src="images/play.png"
+                    class="play-btn"
+                    onclick="playVideo('images/videos/4.mp4')"
+                  />
+                </div>
+                <p>Video 4</p>
+              </div>
+              <div class="small-img-row">
+                <div class="small-img">
+                  <img src="images/videos/thumbnail5.png" />
+                  <img
+                    src="images/play.png"
+                    class="play-btn"
+                    onclick="playVideo('images/videos/5.mp4')"
+                  />
+                </div>
+                <p>Video 5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="video-player" id="videoPlayer">
+          <video width="100%" height="720" controls id="myVideo">
+            <source src="" type="video/mp4" />
+          </video>
+          <img
+            src="images/closee.png"
+            class="close-btn"
+            onclick="stopVideo()"
+          />
+        </div>
+        <footer>
+          <div class="footer">
+            &copy;<span id="year"> </span
+            ><span> GivX. All rights reserved.</span>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <script src="video.js"></script>
+  </body>
+</html>
